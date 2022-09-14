@@ -1,0 +1,195 @@
+/* 
+color palette
+
+#D0F1F2 - light cyan
+#E4FFDE - nyanza (green)
+#3C4F76 - Y in mn blue
+#FFECC3 - Banana Mania
+#1F3D2F - Phthalo green
+
+*/
+
+/*--------------------------GLobal Styles----------------------*/
+
+/* To include padding and margins in the width and height of an element */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: #3C4F76;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 150px;
+    border-radius: 20%;
+    border: 1px solid ;
+}
+
+h1{
+    font-size: 44px;
+    text-shadow: 3px 3px #FFECC3;
+}
+
+h1+h3{
+    font-size: 20px;
+}
+
+.centered-text{
+    text-align: center;
+}
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    justify-items: center;
+    padding: 200px 0 0;
+    background-color: #E4FFDE;
+}
+
+/*--------------------------Header----------------------*/
+
+header {
+    background-image: url("./assets/image2.jpg");
+    background-size: cover;
+    background-position: bottom right;
+    overflow: hidden;
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.display {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+}
+
+/*--------------------------Sidebar----------------------*/
+
+nav a {
+    display: block;
+    min-width:max-content;
+    padding: 20px 90px;
+    border-bottom: 2px solid black;
+}
+
+nav a:first-child{
+    padding-top: 60px;
+}
+
+nav a:last-child{
+    border-bottom: 0;
+    padding-bottom: 200px;
+}
+
+a.active {
+    background-color: #1F3D2F;
+    color: #FFECC3;
+}
+
+.sidebar {
+    justify-self: left;
+    background-color: #FFECC3;
+}
+
+/*--------------------------Main Content----------------------*/
+
+.main-content{
+    padding: 100px 0;
+    width: 80%;
+}
+
+.film{
+    height: 25vw;
+}
+
+.video{
+    display: block;
+    margin: 0 auto;
+}
+
+.counter{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-rows: 150px;
+    padding-top: 20px;
+    justify-items: center;
+    border-bottom: 2px dashed #3C4F76;
+}
+
+.counter img:hover {
+    transform: translate(10px, -10px);
+    transition: 300ms;
+}
+
+.creator.one{
+    text-align: left;
+    padding-bottom: 15px;
+    border-bottom: 2px dashed #3C4F76;
+}
+
+.creator.two{
+    text-align: right;
+    padding-top: 15px;
+}
+
+/*--------------------------Footer----------------------*/
+
+footer {
+    background-image: url("./assets/image2.jpg");
+    background-size: cover;
+    background-position: top right;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+}
+
+.contact-list {
+    display:flex;
+    justify-content: center;
+}
+
+.contact-list li{
+    display: inline-block;
+    padding: 5px 20px;
+
+}
+
+/* ------ Responsive iframe hack ------
+---- but this leads to overlap ----
+.film {
+    position:relative;
+    overflow: hidden;
+    top: 20%;
+    padding-top: 56.25%; 16:9 Aspect Ratio (divide 9 by 16 = 0.5625)
+}
+
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.description{
+    padding: 20% 0;
+} */
