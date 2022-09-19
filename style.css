@@ -51,8 +51,44 @@ h1+h3{
     display: grid;
     grid-template-columns: 1fr 5fr;
     justify-items: center;
-    padding: 200px 0 0;
     background-color: #E4FFDE;
+    overflow: scroll;
+}
+
+.display {
+    max-width: 1000px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* -------------------------Home Page---------------------- */
+
+.homepage{
+    background-image: url("./assets/image2.jpg");
+    background-size: cover;
+    background-position: bottom right;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.homepage img {
+    width: 400px;
+    padding: 50px;
+    border-radius: 20%;
+    border: none;
+}
+
+.home.sidebar nav{
+    text-align: right;
+}
+
+.home.sidebar nav a{
+    display: inline-block;
+    border: none;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 18px;
+
 }
 
 /*--------------------------Header----------------------*/
@@ -62,6 +98,7 @@ header {
     background-size: cover;
     background-position: bottom right;
     overflow: hidden;
+    max-height: 232.45px;
 }
 
 .fixed{
@@ -70,49 +107,45 @@ header {
     width: 100%;
 }
 
-.display {
-    max-width: 1000px;
-    width: 90%;
-    margin: 0 auto;
+.header-format{
     padding: 40px 0;
+    justify-items: center;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    justify-items: center;
 }
 
+.formatter{
+    height: 232.45px;
+}
 /*--------------------------Sidebar----------------------*/
 
-nav a {
+.sidebar nav a {
     display: block;
     min-width:max-content;
-    padding: 20px 90px;
+    padding: 20px 0;
     border-bottom: 2px solid black;
+    text-align: center;
 }
 
-nav a:first-child{
-    padding-top: 60px;
-}
-
-nav a:last-child{
+.body .sidebar nav a:last-child{
     border-bottom: 0;
     padding-bottom: 200px;
 }
 
-a.active {
+.body .sidebar a.active {
     background-color: #1F3D2F;
     color: #FFECC3;
 }
 
 .sidebar {
     justify-self: left;
+    width: 100%;
     background-color: #FFECC3;
 }
-
 /*--------------------------Main Content----------------------*/
 
 .main-content{
-    padding: 100px 0;
-    width: 80%;
+    padding: 60px 0;
 }
 
 .film{
@@ -124,19 +157,44 @@ a.active {
     margin: 0 auto;
 }
 
+/*--------------------------Counters----------------------*/
+
 .counter{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-auto-rows: 150px;
-    padding-top: 20px;
+    padding: 20px 0;
     justify-items: center;
     border-bottom: 2px dashed #3C4F76;
 }
 
-.counter img:hover {
-    transform: translate(10px, -10px);
-    transition: 300ms;
+.counter img {
+    width: 250px;
+    height: 200px;
+    border-radius: 20%;
+    border: 1px solid ;
+    margin: 20px 0;
 }
+
+.counter-desc{
+    margin-left: 15px;
+}
+
+.imgs{
+    display: flex;
+}
+
+.prev, .next{
+    cursor:pointer;
+    display: inline-block;
+    margin: 110px 5px;
+    font-size: 20px;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+
+/*--------------------------About-----------------------*/
 
 .creator.one{
     text-align: left;
@@ -168,6 +226,84 @@ footer {
 .contact-list li{
     display: inline-block;
     padding: 5px 20px;
+
+}
+
+/*--------------------------Media Queries----------------------*/
+
+@media screen and (max-width: 750px ){
+    .body{
+        grid-template-columns: 1fr;
+    }
+    .sidebar nav a {
+        display: inline-block;
+        border: none;
+        padding: 15px 40px;
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .body .sidebar nav a:last-child{
+        display: none;
+    }
+    
+    .sidebar {
+        justify-self: stretch;
+        text-align: center;
+    }
+    
+    .home.sidebar nav{
+        text-align: center;
+    }
+
+    .home.sidebar nav a{
+        font-size: 13px;
+    }   
+    
+    .homepage img {
+        width: 350px;
+    }
+
+    h1{
+        font-size: 34px;
+        text-shadow: 3px 3px #FFECC3;
+    }
+    
+    h1+h3{
+        font-size: 15px;
+    }    
+}
+
+@media screen and (max-width: 450px ){
+    .header-format{
+        grid-template-columns: 1fr;
+    }
+
+    header, .formatter{
+        height: 350px;
+        max-height: 350px;
+    }
+
+    .homepage img {
+        width: 70%;
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    .counter{
+        grid-template-columns: 1fr;
+    }
+    
+    .counter img {
+        width: 90%;
+        height: 72%;
+    }
+
+    .counter-desc{
+        margin-left: 0;
+    }
+
+    
 
 }
 
