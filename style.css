@@ -84,6 +84,7 @@ h1+h3{
 
 .home.sidebar{
     background: none;
+    border: 0;
 }
 
 .home.sidebar nav{
@@ -174,7 +175,7 @@ header {
 }
 
 .description{
-    margin: 20px 100px;
+    margin: 20px 10%;
 }
 
 /*--------------------------Counters----------------------*/
@@ -182,7 +183,7 @@ header {
 .counter{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    padding: 20px 0;
+    margin: 20px 0;
     justify-items: center;
     border-bottom: 2px dashed #3C4F76;
 }
@@ -195,8 +196,14 @@ header {
     margin: 20px 0;
 }
 
+.c-name{
+    font-family: 'Rubik Dirt', cursive;
+    font-size: 30px;
+}
+
 .counter-desc{
-    margin-left: 15px;
+    margin: 0 20px;
+    text-align: justify;
 }
 
 .imgs{
