@@ -1,3 +1,5 @@
+document.getElementById("year").innerText = (new Date()).getFullYear();
+
 var index = {
     one: 0,
     two: 0,
