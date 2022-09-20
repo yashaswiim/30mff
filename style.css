@@ -296,7 +296,7 @@ footer {
     
     .counter img {
         width: 90%;
-        height: 72%;
+        max-height: 72%;
     }
 
     .counter-desc{
