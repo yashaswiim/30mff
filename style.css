@@ -192,7 +192,7 @@ header {
     width: 250px;
     height: 200px;
     border-radius: 20%;
-    border: 1px solid ;
+    border: none;
     margin: 20px 0;
 }
 
