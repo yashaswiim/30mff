@@ -1,4 +1,7 @@
-document.getElementById("year").innerText = (new Date()).getFullYear();
+var year = document.getElementById("year")
+if (year){
+    year.innerText = (new Date()).getFullYear();
+}
 
 var index = {
     one: 0,
@@ -23,16 +26,21 @@ const prevImage = (p)=>{
 }
 
 const showImage = (p, ind)=>{
-    let q = "."+p+" img"
-    let imgs = document.querySelectorAll(q)
+    let query = "."+p+" img"
+    let imgs = document.querySelectorAll(query)
+    if (ind < 0){
+        ind = imgs.length -1
+        index[p]=imgs.length -1
+    }
+    if (ind >= imgs.length){
+        ind = 0
+        index[p]=0
+    }
     if (ind<imgs.length && ind>=0){
         for (let j = 0; j<imgs.length;j++){
             imgs[j].style.display="none"
         }
         imgs[ind].style.display=""
-    }
-    else{
-        index[p]-=1
     }
 }
 
@@ -54,5 +62,18 @@ for(var i=0;i<next_all.length;i++){
     next_all[i].addEventListener("click", (e)=>{
         p = e.path[1].classList[1]
         nextImage(p)
+    })
+}
+
+var counters = document.querySelectorAll(".counter")
+for(var i=0;i<counters.length;i++){
+    counters[i].addEventListener("mouseenter", (e)=>{
+        let name = e.path[0].querySelector(".c-name")
+        name.style.transform="translate(25%, 0)"
+        name.style.transition="all 1s"
+    })
+    counters[i].addEventListener("mouseleave", (e)=>{
+        let name = e.path[0].querySelector(".c-name")
+        name.style.transform=""
     })
 }
