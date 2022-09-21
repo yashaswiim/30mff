@@ -101,6 +101,19 @@ h1+h3{
     font-weight:900;
     color: #3C4F76
 }
+.start{
+    font-size: 60px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 0 30px 10px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+.start:hover{
+    background-color: rgba(0,0,0,0.7);
+}
 
 /*--------------------------Header----------------------*/
 
@@ -300,6 +313,7 @@ footer {
         justify-self: stretch;
         text-align: center;
         border-bottom: 1px solid;
+        border-right: 0;
     }
 }
 
@@ -330,6 +344,11 @@ footer {
         padding: 0;
         margin-top: 50px;
         margin-bottom: 50px;
+    }
+
+    .start{
+        font-size: 40px;
+        padding: 0 20px 5px;
     }
 
     .counter{
