@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Website Icon and Title-->
     <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
     <title>D2 Revisited</title>
+    <!-- Using google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&family=Rubik+Dirt&family=Macondo&family=El+Messiri:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- stylesheet and javascript file -->
     <link rel="stylesheet" href="style.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
+    <!-- The header that stays fixed at the top of the screen even when scrolling through the page-->
     <header class="fixed">
       <div class="display header-format">
         <a href="./index.html">
@@ -27,28 +31,39 @@
         </div>
       </div>
     </header>
+    <!-- When the header is fixed, it is taken out of the normal flow of the page. 
+      So, this div fills up the space that was supposed to be taken by the header in the normal flow 
+      and makes it easier to format the elements following it -->
     <div class="formatter"></div>
+    <!-- this element contains the sidebar and the main content area -->
     <div class="body">
+      <!-- Sidebar with navigation links -->
       <div class="sidebar">
         <nav>
+          <!-- the last a element is added for styling purpose -->
           <a href="./home.html">Video</a>
           <a class="active" href="./counters.html">Counters</a>
           <a href="./about.html">About</a>
           <a href="#"></a>
         </nav>
       </div>
+      <!-- Main content area that holds the film and the description -->
       <div class="main-content counters-content display">
         <h2>Know about all D2 Counters here!</h2>
+        <!-- all items associated to each counter (name, description, images) is enclosed in a section tag -->
         <section class="counter">
           <div class="counter-imgs one">
-            <a class="prev">&#10094;</a>
             <!-- Heavy Left-Pointing Angle Quotation Mark Ornament -->
-            <img src="./assets/counter_one1.png" alt="A picture of counter 1" />
+            <a class="prev">&#10094;</a>
+            <img src="./assets/counter_one1.png" alt="Logo of counter 1" />
             <img src="./assets/counter_one2.jpg" alt="A picture of counter 1" />
-            <img src="./assets/counter_one3.png" alt="A picture of counter 1" />
-            <img src="./assets/counter_one4.jpg" alt="A picture of counter 1" />
-            <a class="next">&#10095;</a>
+            <img src="./assets/counter_one3.png" alt="Old logo of counter 1" />
+            <img
+              src="./assets/counter_one4.jpg"
+              alt="A picture of the menu of counter 1"
+            />
             <!-- Heavy Right-Pointing Angle Quotation Mark Ornament -->
+            <a class="next">&#10095;</a>
           </div>
           <div class="counter-desc">
             <p class="c-name">Saj &rarr; V Fresh</p>
@@ -64,10 +79,13 @@
         <section class="counter">
           <div class="counter-imgs two">
             <a class="prev">&#10094;</a>
-            <img src="./assets/counter_two1.png" alt="A picture of counter 2" />
+            <img src="./assets/counter_two1.png" alt="Logo of counter 2" />
             <img src="./assets/counter_two2.jpg" alt="A picture of counter 2" />
-            <img src="./assets/counter_two3.png" alt="A picture of counter 2" />
-            <img src="./assets/counter_two4.jpg" alt="A picture of counter 2" />
+            <img src="./assets/counter_two3.png" alt="Old logo of counter 2" />
+            <img
+              src="./assets/counter_two4.jpg"
+              alt="A picture of the menu of counter 2"
+            />
 
             <a class="next">&#10095;</a>
           </div>
@@ -84,21 +102,15 @@
         <section class="counter">
           <div class="counter-imgs three">
             <a class="prev">&#10094;</a>
-            <img
-              src="./assets/counter_three1.png"
-              alt="A picture of counter 3"
-            />
-            <img
-              src="./assets/counter_three2.jpg"
-              alt="A picture of counter 3"
-            />
+            <img src="./assets/counter_three1.png" alt="Logo of counter 3" />
+            <img src="./assets/counter_three2.jpg" alt="Picture of counter 3" />
             <img
               src="./assets/counter_three3.png"
-              alt="A picture of counter 3"
+              alt="Old logo of counter 3"
             />
             <img
               src="./assets/counter_three4.jpg"
-              alt="A picture of counter 3"
+              alt="A picture of the menu of counter 3"
             />
             <a class="next">&#10095;</a>
           </div>
@@ -116,23 +128,13 @@
         <section class="counter">
           <div class="counter-imgs four">
             <a class="prev">&#10094;</a>
-            <img
-              src="./assets/counter_four1.png"
-              alt="A picture of counter 4"
-            />
-            <img
-              src="./assets/counter_four2.jpg"
-              alt="A picture of counter 4"
-            />
-            <img
-              src="./assets/counter_four3.png"
-              alt="A picture of counter 4"
-            />
+            <img src="./assets/counter_four1.png" alt="Logo of counter 4" />
+            <img src="./assets/counter_four2.jpg" alt="Picture of counter 4" />
+            <img src="./assets/counter_four3.png" alt="Old logo of counter 4" />
             <img
               src="./assets/counter_four4.jpg"
-              alt="A picture of counter 4"
+              alt="A picture of the menu of counter 4"
             />
-
             <a class="next">&#10095;</a>
           </div>
           <div class="counter-desc">
@@ -150,21 +152,12 @@
         <section class="counter">
           <div class="counter-imgs five">
             <a class="prev">&#10094;</a>
-            <img
-              src="./assets/counter_five1.png"
-              alt="A picture of counter 5"
-            />
-            <img
-              src="./assets/counter_five2.jpg"
-              alt="A picture of counter 5"
-            />
-            <img
-              src="./assets/counter_five3.png"
-              alt="A picture of counter 5"
-            />
+            <img src="./assets/counter_five1.png" alt="Logo of counter 5" />
+            <img src="./assets/counter_five2.jpg" alt="Picture of counter 5" />
+            <img src="./assets/counter_five3.png" alt="Old logo of counter 5" />
             <img
               src="./assets/counter_five4.jpg"
-              alt="A picture of counter 5"
+              alt="A picture of the menu of counter 5"
             />
             <a class="next">&#10095;</a>
           </div>
@@ -183,10 +176,13 @@
         <section class="counter">
           <div class="counter-imgs six">
             <a class="prev">&#10094;</a>
-            <img src="./assets/counter_six1.png" alt="A picture of counter 6" />
-            <img src="./assets/counter_six2.jpg" alt="A picture of counter 6" />
-            <img src="./assets/counter_six3.png" alt="A picture of counter 6" />
-            <img src="./assets/counter_six4.jpg" alt="A picture of counter 6" />
+            <img src="./assets/counter_six1.png" alt="Logo of counter 6" />
+            <img src="./assets/counter_six2.jpg" alt="Picture of counter 6" />
+            <img src="./assets/counter_six3.png" alt="Old logo of counter 6" />
+            <img
+              src="./assets/counter_six4.jpg"
+              alt="A picture of the menu of counter 6"
+            />
             <a class="next">&#10095;</a>
           </div>
           <div class="counter-desc">

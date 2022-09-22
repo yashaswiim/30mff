@@ -143,6 +143,7 @@ header {
 .header-format{
     padding: 40px 0;
     justify-items: center;
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
@@ -212,6 +213,7 @@ that was supposed to be taken by the header in the normal flow  */
     grid-template-columns: 1fr 3fr;
     margin: 20px 0;
     justify-items: center;
+    align-items: center;
     border-bottom: 2px dashed #3C4F76;
 }
 

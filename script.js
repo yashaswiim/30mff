@@ -65,7 +65,7 @@ for (let i=0; i < Object.keys(index).length;i++){
 for(let i=0;i<prev_all.length;i++){
     prev_all[i].addEventListener("click", (e)=>{
         //getting the appropriate counter whose image is to be changed
-        let counter = e.path[1].classList[1];
+        let counter = e.composedPath()[1].classList[1];
         prevImage(counter);
     })
 }
@@ -74,7 +74,7 @@ for(let i=0;i<prev_all.length;i++){
 for(let i=0;i<next_all.length;i++){
     next_all[i].addEventListener("click", (e)=>{
         //getting the appropriate counter whose image is to be changed
-        let counter = e.path[1].classList[1];
+        let counter = e.composedPath()[1].classList[1];
         nextImage(counter);
     })
 }
@@ -83,12 +83,12 @@ for(let i=0;i<next_all.length;i++){
 var counters = document.querySelectorAll(".counter")
 for(let i=0;i<counters.length;i++){
     counters[i].addEventListener("mouseenter", (e)=>{
-        let name = e.path[0].querySelector(".c-name")
+        let name = e.composedPath()[0].querySelector(".c-name")
         name.style.transform="skew(-25deg)"
         name.style.transition="all 0.5s"
     })
     counters[i].addEventListener("mouseleave", (e)=>{
-        let name = e.path[0].querySelector(".c-name")
+        let name = e.composedPath()[0].querySelector(".c-name")
         name.style.transform=""
     })
 }
