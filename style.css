@@ -1,11 +1,9 @@
 /* 
-color palette
-
+Color Palette
 #FABB34 - Honey yellow
-#DEFFEB - aero blue (green)
+#DEFFEB - Aero Blue
 #3C4F76 - Y in mn blue
 #FEF8DB - Cornsilk
-
 */
 
 /*--------------------------GLobal Styles----------------------*/
@@ -51,6 +49,8 @@ h1+h3{
     text-align: center;
 }
 
+/* Different from body -- does not include the header */
+
 .body{
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -58,6 +58,8 @@ h1+h3{
     background-color: #FEF8DB;
     overflow: scroll;
 }
+
+/* So that the content stays in the middle of the screen and does not reach the end of the screen */
 
 .display {
     max-width: 1000px;
@@ -101,6 +103,9 @@ h1+h3{
     font-weight:900;
     color: #3C4F76
 }
+
+/* the start button on the homepage */
+
 .start{
     font-size: 60px;
     background-color: rgba(0,0,0,0.3);
@@ -125,11 +130,15 @@ header {
     height: 280px;
 }
 
+/* fixes the header to the top of the page when scrolling */
+
 .fixed{
     position: fixed;
     top: 0;
     width: 100%;
 }
+
+/* grid display to keep the logo and the title/tagline side-by-side */
 
 .header-format{
     padding: 40px 0;
@@ -137,6 +146,9 @@ header {
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
+
+ /* Same height as the header because it needs to fill up the space 
+that was supposed to be taken by the header in the normal flow  */
 
 .formatter{
     height: 280px;
@@ -179,7 +191,7 @@ header {
 }
 
 .film{
-    height: 25vw;
+    height: 25vw; /*scales according to the window size -- to maintain the aspect ratio*/
 }
 
 .video{
@@ -192,6 +204,8 @@ header {
 }
 
 /*--------------------------Counters----------------------*/
+
+/* grid diplay to keep the iamges of each counter and their respective descriptions side by side */
 
 .counter{
     display: grid;
@@ -209,6 +223,8 @@ header {
     margin: 20px 0;
 }
 
+/* titles, descriptions and images of each counter */
+
 .c-name{
     font-family: 'Rubik Dirt', cursive;
     font-size: 30px;
@@ -219,9 +235,11 @@ header {
     text-align: justify;
 }
 
-.imgs{
+.counter-imgs{
     display: flex;
 }
+
+/* previous and next buttons for the photo carousel */
 
 .prev, .next{
     cursor:pointer;
@@ -269,6 +287,8 @@ footer {
 
 /*--------------------------Media Queries----------------------*/
 
+/* For screens that are narrower than 800px */
+
 @media screen and (max-width: 800px ){
     h1{
         font-size: 58px;
@@ -279,7 +299,11 @@ footer {
     } 
     
     header h1{
-        font-size: 48px;
+        font-size: 44px;
+    }
+
+    header h1+h3{
+        font-size: 18px;
     }
 
     .home.sidebar nav{
@@ -293,7 +317,10 @@ footer {
     .homepage img {
         width: 350px;
     }
- 
+    
+    /* keeping the sidebar and the main content area side by side would be too congested for smaller screens */
+    /* so it is displayed as one followed by the other (only one column)*/
+
     .body{
         grid-template-columns: 1fr;
     }
@@ -305,6 +332,8 @@ footer {
         text-decoration: none;
     }
 
+    /* since the navigation bar is now displayed in a single line, the last a element is no longer needed for styling */
+
     .body .sidebar nav a:last-child{
         display: none;
     }
@@ -315,16 +344,28 @@ footer {
         border-bottom: 1px solid;
         border-right: 0;
     }
+
+    .film{
+        height: 40vw;
+    }
 }
 
+/* For screens that are narrower than 520px */
+
 @media screen and (max-width: 520px ){
+
+    /* keeping the logo and the title/tagline side by side would be too congested for screens of this size*/
+    /* so it is displayed as one followed by the other (only one column) */
+
     .header-format{
         grid-template-columns: 1fr;
     }
 
+    /* since the image, title and tagline are stacked on top of one another,
+     more height is occupied by the header content.*/
     header, .formatter{
-        height: 400px;
-        max-height: 400px;
+        height: 200px;
+        max-height: 200px;
     }
 
     h1{
@@ -335,51 +376,63 @@ footer {
         font-size: 18px;
     }
 
+    .header-format{
+        padding: 10px;
+        width: 95%;
+    }
+
+    header img{
+        width: 110px;
+    }
+
     header h1{
-        font-size: 40px;
+        font-size: 25px;
+    }
+    
+    header h1+h3{
+        font-size: 14px;
+        margin: 5px;
     }
 
     .homepage img {
-        width: 70%;
+        width: 70%; /* as the screen size becomes smaller, 
+                    we want the image to scale according to the scrren size 
+                    rather than being of fixed size.*/
         padding: 0;
         margin-top: 50px;
         margin-bottom: 50px;
     }
+
+    /* smaller button size for a smaller screen */
 
     .start{
         font-size: 40px;
         padding: 0 20px 5px;
     }
 
+    .sidebar nav a {
+        display: inline-block;
+        border: none;
+        padding: 5px 40px;
+        text-decoration: none;
+    }
+
+    /* keeping the image and the description of the counters side by side 
+    would be too congested for screens of this size*/
+    /* so it is displayed as one followed by the other (only one column) */
+
     .counter{
         grid-template-columns: 1fr;
     }
     
     .counter img {
-        width: 90%;
-        max-height: 72%;
+        width: 80%; /* as the screen size becomes smaller, 
+                    we want the image to scale according to the scrren size 
+                    rather than being of fixed size.*/
+        max-height: 64%;
     }
 
     .counter-desc{
         margin-left: 0;
     }
-}
-
-/* ------ Responsive iframe hack ------
----- but this leads to overlap ----
-.film {
-    position:relative;
-    overflow: hidden;
-    top: 20%;
-    padding-top: 56.25%; 16:9 Aspect Ratio (divide 9 by 16 = 0.5625)
-}
-
-.video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
 }

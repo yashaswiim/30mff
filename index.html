@@ -4,38 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Website Icon and Title-->
     <link rel="icon" href="./assets/icon.png" type="image/x-icon" />
-
     <title>D2 Revisited</title>
+    <!-- Using google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&family=Rubik+Dirt&family=Macondo&family=El+Messiri:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- stylesheet and javascript file -->
     <link rel="stylesheet" href="style.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
     <div class="homepage">
+      <!-- Navigation Bar at the top -->
       <div class="sidebar home">
         <nav>
-          <!-- first and last a elements are added for styling purpose -->
           <a href="./home.html">Video</a>
           <a href="./counters.html">Counters</a>
           <a href="./about.html">About</a>
         </nav>
       </div>
-      <div class="display">
-        <div class="centered-text">
-          <img src="./assets/d2.jpg" alt="Logo" />
-          <h1>DINING HALL REVISITED</h1>
-          <h3>What's new... in the newly revamped East Dining Hall?</h3>
-          <!-- <a href="./home.html" class="start">&rsaquo;</a> -->
-          <button class="start" onclick="window.location.href='./home.html'">
-            &rsaquo;
-          </button>
-        </div>
+      <!-- Logo, title, tagline for the film/website and the start button-->
+      <div class="display centered-text">
+        <img src="./assets/d2.jpg" alt="Logo" />
+        <h1>DINING HALL REVISITED</h1>
+        <h3>What's new... in the newly revamped East Dining Hall?</h3>
+        <button class="start" onclick="window.location.href='./home.html'">
+          &rsaquo;
+        </button>
+        <!-- Alternate option: using hyperlink instead of a button -->
+        <!-- <a href="./home.html" class="start">&rsaquo;</a> -->
       </div>
     </div>
   </body>
